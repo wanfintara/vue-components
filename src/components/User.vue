@@ -3,11 +3,12 @@
     <h1>The User Component</h1>
     <p>I'm an awesome User!</p>
     <button @click="changeName">Change my name</button>
+    <p>Name {{ name }}</p>
     <hr>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <!-- <appUserDetail v-bind:myName="name"></appUserDetail> -->
-        <appUserDetail></appUserDetail>
+        <appUserDetail v-bind:myName="name" @nameWasReset="name = $event"></appUserDetail>
+        <!-- <appUserDetail></appUserDetail> -->
       </div>
       <div class="col-xs-12 col-sm-6">
         <app-user-edit></app-user-edit>
