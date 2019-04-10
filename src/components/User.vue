@@ -7,8 +7,7 @@
     <hr>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <appUserDetail v-bind:myName="name" @nameWasReset="name = $event"></appUserDetail>
-        <!-- <appUserDetail></appUserDetail> -->
+        <appUserDetail :myName="name" :resetFn="resetName" @nameWasReset="name = $event"></appUserDetail>
       </div>
       <div class="col-xs-12 col-sm-6">
         <app-user-edit></app-user-edit>
@@ -30,6 +29,9 @@ export default {
   methods: {
     changeName() {
       this.name = "Anna";
+    },
+    resetName() {
+      this.name = "Wawan";
     }
   },
   components: {
