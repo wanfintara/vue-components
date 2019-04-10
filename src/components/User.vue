@@ -6,7 +6,8 @@
     <hr>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <app-user-detail :name="name"></app-user-detail>
+        <!-- <appUserDetail v-bind:myName="name"></appUserDetail> -->
+        <appUserDetail></appUserDetail>
       </div>
       <div class="col-xs-12 col-sm-6">
         <app-user-edit></app-user-edit>
