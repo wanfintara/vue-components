@@ -3,8 +3,9 @@
     <h3>You may view the User Details here</h3>
     <p>Many Details</p>
     <p>User Name: {{ switchName() }}</p>
+    <p>User Age: {{ userAge }}</p>
     <button @click="resetName">Reset Name</button>
-		<button @click="resetFn()">Reset Name</button>
+    <button @click="resetFn()">Reset Name</button>
   </div>
 </template>
 
@@ -17,8 +18,9 @@ export default {
       type: String,
       // required: true
       default: "Pota"
-		},
-		resetFn: Function
+    },
+    resetFn: Function,
+    userAge: Number
   },
   methods: {
     switchName() {
@@ -28,8 +30,8 @@ export default {
         .join("");
     },
     resetName() {
-			this.myName = "Potaina";
-			this.$emit('nameWasReset', this.myName);
+      this.myName = "Potaina";
+      this.$emit("nameWasReset", this.myName);
     }
   }
 };
